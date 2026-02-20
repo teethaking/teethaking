@@ -4,7 +4,7 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Bebas+Neue&size=35&duration=3500&pause=1000&color=00D4FF&center=true&vCenter=true&width=800&height=70&lines=Throughout+Heaven+and+Earth...;I+Alone+Am+The+Full+Stack+One.;Building+Applications+with+Limitless+Precision.;Frontend.+Backend.+Domain+Expansion." />
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHIybTVqZnN0eXFvYm95eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UgV8Y7VAfMrA0A7fTb/giphy.gif" width="400px" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=teethaking&bg_color=000814&color=00d4ff&line=00d4ff&point=ffffff&area=true&hide_border=true" width="100%" />
 
 </div>
 
@@ -26,18 +26,13 @@
 
 ## ▌ 👁️ THE SIX EYES (ABOUT ME)
 
-<table align="center">
-  <tr>
-    <td width="50%">
-      <p>I am a <b>Special Grade Developer</b> based in Nigeria. Just like the Limitless technique, I bring infinite precision to the web. I specialize in the <b>Next.js ecosystem</b>, turning complex problems into elegant, high-performance solutions.</p>
-      <br/>
-      <p><b>Current Objective:</b> Perfecting my Domain Expansion (Full Stack Mastery) and taking on high-impact freelance projects.</p>
-    </td>
-    <td width="50%" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=teethaking&layout=compact&theme=tokyonight&hide_border=true&title_color=00d4ff&text_color=ffffff&bg_color=000814" width="300px"/>
-    </td>
-  </tr>
-</table>
+<div align="center">
+
+I am a **Special Grade Developer** based in Nigeria. Just like the Limitless technique, I bring infinite precision to the web. I specialize in the **Next.js ecosystem**, turning complex problems into elegant, high-performance solutions.
+
+**Current Objective:** Perfecting my Domain Expansion (Full Stack Mastery) and taking on high-impact freelance projects.
+
+</div>
 
 ---
 
@@ -66,7 +61,7 @@
 <br/>
 
 <img src="https://github-readme-stats.vercel.app/api?username=teethaking&show_icons=true&theme=tokyonight&hide_border=true&bg_color=000814&title_color=00d4ff&text_color=ffffff" width="48%" />
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=teethaking&bg_color=000814&color=00d4ff&line=00d4ff&point=ffffff&area=true&hide_border=true" width="48%" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=teethaking&layout=compact&theme=tokyonight&hide_border=true&title_color=00d4ff&text_color=ffffff&bg_color=000814" width="48%" />
 
 </div>
 
