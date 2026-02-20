@@ -1,609 +1,343 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>teethaking — GitHub Profile</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
-<style>
-  :root {
-    --void: #030712;
-    --blue: #60c8ff;
-    --red: #ff4c6a;
-    --purple: #c084fc;
-    --white: #f0f4ff;
-    --muted: #4a5568;
-    --border: rgba(96, 200, 255, 0.15);
-  }
+<div align="center">
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+<!--  ╔══════════════════════════════════════╗  -->
+<!--  ║     ANIMATED HEADER — TOBE/GOJO     ║  -->
+<!--  ╚══════════════════════════════════════╝  -->
 
-  body {
-    background: var(--void);
-    color: var(--white);
-    font-family: 'Syne', sans-serif;
-    min-height: 100vh;
-    overflow-x: hidden;
-    cursor: none;
-  }
+<svg width="860" height="180" viewBox="0 0 860 180" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#60c8ff"/>
+      <stop offset="50%"  stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#60c8ff"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-1 0" to="1 0" dur="3s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="subGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#4a5568"/>
+      <stop offset="50%"  stop-color="#60c8ff" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#4a5568"/>
+    </linearGradient>
+    <!-- ring glow -->
+    <radialGradient id="ringGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#60c8ff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#60c8ff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
 
-  /* Custom cursor */
-  .cursor {
-    position: fixed;
-    width: 12px; height: 12px;
-    background: var(--blue);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    transition: transform 0.1s ease;
-    mix-blend-mode: screen;
-  }
-  .cursor-ring {
-    position: fixed;
-    width: 36px; height: 36px;
-    border: 1px solid rgba(96,200,255,0.4);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-    transition: all 0.15s ease;
-  }
+  <!-- Background -->
+  <rect width="860" height="180" fill="#030712" rx="12"/>
 
-  /* Particle canvas */
-  #particles {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-  }
+  <!-- Infinity rings -->
+  <g transform="translate(430,90)" opacity="0.25">
+    <ellipse cx="0" cy="0" rx="60"  ry="60"  fill="none" stroke="#60c8ff" stroke-width="0.5">
+      <animate attributeName="rx" values="60;65;60" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="60;65;60" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.25;0.5;0.25" dur="5s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="0" cy="0" rx="100" ry="100" fill="none" stroke="#c084fc" stroke-width="0.5">
+      <animate attributeName="rx" values="100;107;100" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="100;107;100" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.4;0.2" dur="6s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="0" cy="0" rx="150" ry="150" fill="none" stroke="#60c8ff" stroke-width="0.4">
+      <animate attributeName="rx" values="150;160;150" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="150;160;150" dur="7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.15;0.3;0.15" dur="7s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
 
-  /* Infinity rings background */
-  .infinity-bg {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: none;
-    overflow: hidden;
-  }
-  .ring {
-    position: absolute;
-    border-radius: 50%;
-    border: 1px solid rgba(96, 200, 255, 0.04);
-    animation: pulse-ring 8s ease-in-out infinite;
-  }
-  .ring:nth-child(1) { width: 300px; height: 300px; animation-delay: 0s; }
-  .ring:nth-child(2) { width: 550px; height: 550px; animation-delay: 1s; border-color: rgba(192,132,252,0.04); }
-  .ring:nth-child(3) { width: 800px; height: 800px; animation-delay: 2s; }
-  .ring:nth-child(4) { width: 1100px; height: 1100px; animation-delay: 3s; border-color: rgba(255,76,106,0.03); }
-  .ring:nth-child(5) { width: 1400px; height: 1400px; animation-delay: 4s; }
+  <!-- Eyebrow -->
+  <text x="430" y="38" text-anchor="middle" font-family="monospace" font-size="10" letter-spacing="6" fill="#60c8ff" opacity="0.7">
+    ∞  FULL  STACK  DEVELOPER  ∞
+    <animate attributeName="opacity" values="0.4;0.9;0.4" dur="3s" repeatCount="indefinite"/>
+  </text>
 
-  @keyframes pulse-ring {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.04); opacity: 1; }
-  }
+  <!-- Main name -->
+  <text x="430" y="120" text-anchor="middle"
+        font-family="'Trebuchet MS', sans-serif"
+        font-size="88" font-weight="900" letter-spacing="18"
+        fill="url(#nameGrad)" filter="url(#glow)">
+    TOBE
+  </text>
 
-  /* Main layout */
-  .container {
-    position: relative;
-    z-index: 1;
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 80px 32px 120px;
-  }
+  <!-- Sub -->
+  <text x="430" y="155" text-anchor="middle" font-family="monospace" font-size="11" letter-spacing="5" fill="url(#subGrad)">
+    teethaking  ·  open to work
+  </text>
 
-  /* ── HERO ── */
-  .hero {
-    text-align: center;
-    margin-bottom: 100px;
-    animation: fadeUp 1s ease both;
-  }
+  <!-- Corner glyphs -->
+  <text x="24" y="30"  font-family="monospace" font-size="10" fill="#60c8ff" opacity="0.3">✦</text>
+  <text x="836" y="30" font-family="monospace" font-size="10" fill="#60c8ff" opacity="0.3">✦</text>
+  <text x="24" y="165" font-family="monospace" font-size="10" fill="#c084fc" opacity="0.3">∞</text>
+  <text x="833" y="165" font-family="monospace" font-size="10" fill="#c084fc" opacity="0.3">∞</text>
+</svg>
 
-  .hero-eyebrow {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    color: var(--blue);
-    text-transform: uppercase;
-    margin-bottom: 24px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.2s both;
-  }
+<br/>
 
-  .hero-name {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(72px, 14vw, 140px);
-    line-height: 0.9;
-    letter-spacing: 0.02em;
-    background: linear-gradient(135deg, var(--white) 0%, var(--blue) 50%, var(--purple) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.4s both, shimmer 6s linear 1.2s infinite;
-    background-size: 200% 200%;
-  }
+<!--  ╔══════════════════╗  -->
+<!--  ║  ROTATING QUOTE  ║  -->
+<!--  ╚══════════════════╝  -->
 
-  @keyframes shimmer {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
+<svg width="700" height="52" viewBox="0 0 700 52" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="52" fill="transparent"/>
 
-  .hero-sub {
-    font-family: 'DM Mono', monospace;
-    font-size: 13px;
-    color: var(--muted);
-    letter-spacing: 0.15em;
-    margin-top: 20px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.6s both;
-  }
+  <!-- Quote 1 — cocky -->
+  <text x="350" y="28" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-style="italic" fill="#f0f4ff" opacity="0">
+    "Throughout Heaven and Earth — I alone am the honored one."
+    <animate attributeName="opacity" values="0;0;0.7;0.7;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0" dur="28s" repeatCount="indefinite"/>
+  </text>
 
-  /* Rotating quote */
-  .quote-wrap {
-    margin-top: 48px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    animation: fadeUp 0.8s ease 0.8s both;
-  }
-  .quote {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(13px, 2vw, 16px);
-    font-style: italic;
-    color: rgba(240,244,255,0.55);
-    max-width: 520px;
-    text-align: center;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.8s ease;
-  }
-  .quote.active { opacity: 1; }
+  <!-- Quote 2 — cold -->
+  <text x="350" y="28" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-style="italic" fill="#f0f4ff" opacity="0">
+    "Don't worry. I already won before I started."
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0.7;0.7;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0" dur="28s" repeatCount="indefinite"/>
+  </text>
 
-  /* Status pill */
-  .status {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 32px;
-    padding: 8px 20px;
-    border: 1px solid rgba(96,200,255,0.2);
-    border-radius: 100px;
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    color: var(--blue);
-    opacity: 0;
-    animation: fadeUp 0.8s ease 1s both;
-  }
-  .status-dot {
-    width: 6px; height: 6px;
-    border-radius: 50%;
-    background: #4ade80;
-    animation: blink 1.4s ease-in-out infinite;
-  }
-  @keyframes blink {
-    0%,100% { opacity: 1; }
-    50% { opacity: 0.2; }
-  }
+  <!-- Quote 3 — hyped -->
+  <text x="350" y="28" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-style="italic" fill="#f0f4ff" opacity="0">
+    "Limitless. The technique. Also my commit history."
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0;0;0;0;0;0;0.7;0.7;0;0;0;0;0;0;0;0;0;0" dur="28s" repeatCount="indefinite"/>
+  </text>
 
-  /* ── DIVIDER ── */
-  .divider {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin: 64px 0 48px;
-    opacity: 0;
-    animation: fadeUp 0.6s ease both;
-  }
-  .divider-line { flex: 1; height: 1px; background: var(--border); }
-  .divider-glyph {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
-    color: rgba(96,200,255,0.3);
-  }
+  <!-- Quote 4 — cold -->
+  <text x="350" y="28" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-style="italic" fill="#f0f4ff" opacity="0">
+    "I'm the strongest. Sorry to keep you waiting."
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0.7;0.7;0;0;0;0" dur="28s" repeatCount="indefinite"/>
+  </text>
 
-  /* ── SECTION LABEL ── */
-  .section-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.35em;
-    color: var(--blue);
-    text-transform: uppercase;
-    margin-bottom: 32px;
-    opacity: 0;
-    animation: fadeUp 0.6s ease both;
-  }
+  <!-- Quote 5 — chaotic -->
+  <text x="350" y="28" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-style="italic" fill="#f0f4ff" opacity="0">
+    "My pull requests don't need reviewing. They're already perfect."
+    <animate attributeName="opacity" values="0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0.7;0.7" dur="28s" repeatCount="indefinite"/>
+  </text>
+</svg>
 
-  /* ── TECH GRID ── */
-  .tech-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 12px;
-    margin-bottom: 80px;
-  }
+<br/>
 
-  .tech-chip {
-    position: relative;
-    padding: 14px 16px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    text-align: center;
-    font-family: 'DM Mono', monospace;
-    font-size: 12px;
-    color: rgba(240,244,255,0.65);
-    overflow: hidden;
-    cursor: none;
-    opacity: 0;
-    animation: fadeUp 0.5s ease both;
-    transition: border-color 0.3s, color 0.3s, transform 0.3s;
-    background: rgba(255,255,255,0.015);
-  }
-  .tech-chip::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(96,200,255,0.06), rgba(192,132,252,0.06));
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .tech-chip:hover::before { opacity: 1; }
-  .tech-chip:hover {
-    border-color: rgba(96,200,255,0.4);
-    color: var(--white);
-    transform: translateY(-3px);
-  }
-  .tech-chip .tech-icon {
-    display: block;
-    font-size: 20px;
-    margin-bottom: 6px;
-  }
+<!--  STATUS PILL  -->
 
-  /* ── CURSED ENERGY BARS ── */
-  .bars { margin-bottom: 80px; }
-  .bar-row {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeUp 0.5s ease both;
-  }
-  .bar-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    color: rgba(240,244,255,0.4);
-    width: 120px;
-    flex-shrink: 0;
-    text-transform: uppercase;
-  }
-  .bar-track {
-    flex: 1;
-    height: 2px;
-    background: rgba(255,255,255,0.05);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-  .bar-fill {
-    height: 100%;
-    border-radius: 2px;
-    width: 0%;
-    transition: width 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-  }
-  .bar-fill.blue  { background: linear-gradient(90deg, var(--blue), var(--purple)); }
-  .bar-fill.red   { background: linear-gradient(90deg, var(--red), var(--purple)); }
-  .bar-fill.inf   { background: linear-gradient(90deg, var(--purple), var(--blue)); animation: pulse-bar 2s ease-in-out infinite; }
-  @keyframes pulse-bar {
-    0%,100% { opacity:1; }
-    50% { opacity:0.6; }
-  }
-  .bar-val {
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    color: rgba(96,200,255,0.6);
-    width: 28px;
-    text-align: right;
-  }
-
-  /* ── DOMAIN EXPANSION ── */
-  .domain {
-    position: relative;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 48px 40px;
-    text-align: center;
-    overflow: hidden;
-    margin-bottom: 80px;
-    opacity: 0;
-    animation: fadeUp 0.8s ease both;
-  }
-  .domain::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: 12px;
-    background: linear-gradient(135deg, rgba(96,200,255,0.1), transparent, rgba(192,132,252,0.1));
-    z-index: -1;
-  }
-  .domain-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 56px;
-    letter-spacing: 0.12em;
-    background: linear-gradient(90deg, var(--blue), var(--purple), var(--red));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: domain-flicker 4s ease-in-out infinite;
-  }
-  @keyframes domain-flicker {
-    0%,100% { opacity:1; filter: blur(0px); }
-    48% { opacity:1; filter: blur(0px); }
-    50% { opacity:0.6; filter: blur(1px); }
-    52% { opacity:1; filter: blur(0px); }
-  }
-  .domain-sub {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.3em;
-    color: rgba(240,244,255,0.25);
-    margin-top: 8px;
-    text-transform: uppercase;
-  }
-  .domain-orbs {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    margin-top: 36px;
-  }
-  .orb {
-    width: 48px; height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    position: relative;
-  }
-  .orb::before {
-    content: '';
-    position: absolute;
-    inset: -6px;
-    border-radius: 50%;
-    opacity: 0.15;
-    animation: orb-pulse 3s ease-in-out infinite;
-  }
-  .orb-blue { background: rgba(96,200,255,0.1); border: 1px solid rgba(96,200,255,0.3); color: var(--blue); }
-  .orb-blue::before { background: radial-gradient(var(--blue), transparent); animation-delay: 0s; }
-  .orb-red  { background: rgba(255,76,106,0.1); border: 1px solid rgba(255,76,106,0.3); color: var(--red); }
-  .orb-red::before  { background: radial-gradient(var(--red), transparent); animation-delay: 1s; }
-  .orb-prp  { background: rgba(192,132,252,0.1); border: 1px solid rgba(192,132,252,0.3); color: var(--purple); }
-  .orb-prp::before  { background: radial-gradient(var(--purple), transparent); animation-delay: 2s; }
-  @keyframes orb-pulse {
-    0%,100% { transform: scale(1); opacity: 0.15; }
-    50% { transform: scale(1.5); opacity: 0.3; }
-  }
-
-  /* ── FOOTER ── */
-  .footer {
-    text-align: center;
-    font-family: 'DM Mono', monospace;
-    font-size: 10px;
-    letter-spacing: 0.25em;
-    color: rgba(240,244,255,0.15);
-    text-transform: uppercase;
-    opacity: 0;
-    animation: fadeUp 0.6s ease both;
-  }
-  .footer span { color: rgba(96,200,255,0.3); }
-
-  @keyframes fadeUp {
-    from { opacity:0; transform: translateY(24px); }
-    to   { opacity:1; transform: translateY(0); }
-  }
-</style>
-</head>
-<body>
-
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
-<canvas id="particles"></canvas>
-
-<div class="infinity-bg">
-  <div class="ring"></div>
-  <div class="ring"></div>
-  <div class="ring"></div>
-  <div class="ring"></div>
-  <div class="ring"></div>
-</div>
-
-<div class="container">
-
-  <!-- HERO -->
-  <div class="hero">
-    <p class="hero-eyebrow">∞ &nbsp; Full Stack Developer &nbsp; ∞</p>
-    <h1 class="hero-name">TOBE</h1>
-    <p class="hero-sub">teethaking &nbsp;/&nbsp; open to work</p>
-
-    <div class="quote-wrap">
-      <p class="quote active" id="q0">"Throughout Heaven and Earth — I alone am the honored one."</p>
-      <p class="quote" id="q1">"I'm the strongest. Sorry to keep you waiting."</p>
-      <p class="quote" id="q2">"Don't worry. I'm the strongest there is."</p>
-      <p class="quote" id="q3">"If you were wondering — yes, I do look this good while shipping."</p>
-      <p class="quote" id="q4">"Limitless. That's the technique. Also the commit history."</p>
-      <p class="quote" id="q5">"I don't need to open a domain. My pull requests do it for me."</p>
-    </div>
-
-    <div class="status">
-      <span class="status-dot"></span>
-      OPEN TO WORK
-    </div>
-  </div>
-
-  <!-- TECH -->
-  <div class="divider" style="animation-delay:1.1s">
-    <div class="divider-line"></div>
-    <div class="divider-glyph">CURSED TOOLS</div>
-    <div class="divider-line"></div>
-  </div>
-
-  <p class="section-label" style="animation-delay:1.2s">⌇ TECHNIQUE ARSENAL</p>
-
-  <div class="tech-grid">
-    <div class="tech-chip" style="animation-delay:1.3s"><span class="tech-icon">⚡</span>JavaScript</div>
-    <div class="tech-chip" style="animation-delay:1.35s"><span class="tech-icon">🔷</span>TypeScript</div>
-    <div class="tech-chip" style="animation-delay:1.4s"><span class="tech-icon">⚛️</span>React</div>
-    <div class="tech-chip" style="animation-delay:1.45s"><span class="tech-icon">▲</span>Next.js</div>
-    <div class="tech-chip" style="animation-delay:1.5s"><span class="tech-icon">🐍</span>Python</div>
-    <div class="tech-chip" style="animation-delay:1.55s"><span class="tech-icon">🟩</span>Node.js</div>
-    <div class="tech-chip" style="animation-delay:1.6s"><span class="tech-icon">🌊</span>Tailwind</div>
-    <div class="tech-chip" style="animation-delay:1.65s"><span class="tech-icon">🐘</span>PostgreSQL</div>
-    <div class="tech-chip" style="animation-delay:1.7s"><span class="tech-icon">🍃</span>MongoDB</div>
-  </div>
-
-  <!-- BARS -->
-  <div class="divider" style="animation-delay:1.75s">
-    <div class="divider-line"></div>
-    <div class="divider-glyph">SIX EYES</div>
-    <div class="divider-line"></div>
-  </div>
-
-  <p class="section-label" style="animation-delay:1.8s">⌇ CURSED ENERGY OUTPUT</p>
-
-  <div class="bars">
-    <div class="bar-row" style="animation-delay:1.85s">
-      <span class="bar-label">Frontend</span>
-      <div class="bar-track"><div class="bar-fill blue" data-w="92"></div></div>
-      <span class="bar-val">92</span>
-    </div>
-    <div class="bar-row" style="animation-delay:1.9s">
-      <span class="bar-label">Backend</span>
-      <div class="bar-track"><div class="bar-fill blue" data-w="85"></div></div>
-      <span class="bar-val">85</span>
-    </div>
-    <div class="bar-row" style="animation-delay:1.95s">
-      <span class="bar-label">Databases</span>
-      <div class="bar-track"><div class="bar-fill red" data-w="80"></div></div>
-      <span class="bar-val">80</span>
-    </div>
-    <div class="bar-row" style="animation-delay:2.0s">
-      <span class="bar-label">Problem Solving</span>
-      <div class="bar-track"><div class="bar-fill red" data-w="95"></div></div>
-      <span class="bar-val">95</span>
-    </div>
-    <div class="bar-row" style="animation-delay:2.05s">
-      <span class="bar-label">Ego</span>
-      <div class="bar-track"><div class="bar-fill inf" data-w="100"></div></div>
-      <span class="bar-val">∞</span>
-    </div>
-  </div>
-
-  <!-- DOMAIN -->
-  <div class="divider" style="animation-delay:2.1s">
-    <div class="divider-line"></div>
-    <div class="divider-glyph">∞</div>
-    <div class="divider-line"></div>
-  </div>
-
-  <div class="domain" style="animation-delay:2.2s">
-    <div class="domain-title">UNLIMITED VOID</div>
-    <p class="domain-sub">Domain Expansion — Active</p>
-    <div class="domain-orbs">
-      <div class="orb orb-blue">BLUE</div>
-      <div class="orb orb-prp">∞</div>
-      <div class="orb orb-red">RED</div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer" style="animation-delay:2.5s">
-    <span>∞</span> &nbsp; teethaking &nbsp; · &nbsp; Tobe &nbsp; · &nbsp; All Domains &nbsp; <span>∞</span>
-  </div>
+<svg width="200" height="30" viewBox="0 0 200 30" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="30" rx="15" fill="transparent" stroke="#60c8ff" stroke-width="0.8" stroke-opacity="0.25"/>
+  <circle cx="20" cy="15" r="4" fill="#4ade80">
+    <animate attributeName="opacity" values="1;0.2;1" dur="1.4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="34" y="20" font-family="monospace" font-size="10" letter-spacing="3" fill="#60c8ff" opacity="0.8">OPEN TO WORK</text>
+</svg>
 
 </div>
 
-<script>
-  // Cursor
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('cursorRing');
-  let mx = 0, my = 0, rx = 0, ry = 0;
-  document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
-    cursor.style.left = mx - 6 + 'px';
-    cursor.style.top  = my - 6 + 'px';
-  });
-  (function animateRing() {
-    rx += (mx - rx - 18) * 0.12;
-    ry += (my - ry - 18) * 0.12;
-    ring.style.left = rx + 'px';
-    ring.style.top  = ry + 'px';
-    requestAnimationFrame(animateRing);
-  })();
+---
 
-  // Particles
-  const canvas = document.getElementById('particles');
-  const ctx = canvas.getContext('2d');
-  let W, H, particles = [];
-  function resize() {
-    W = canvas.width  = window.innerWidth;
-    H = canvas.height = window.innerHeight;
-  }
-  resize();
-  window.addEventListener('resize', resize);
+<br/>
 
-  const COLORS = ['rgba(96,200,255,', 'rgba(192,132,252,', 'rgba(255,76,106,'];
-  for (let i = 0; i < 55; i++) {
-    particles.push({
-      x: Math.random() * 1920,
-      y: Math.random() * 1080,
-      r: Math.random() * 1.5 + 0.3,
-      dx: (Math.random() - 0.5) * 0.3,
-      dy: (Math.random() - 0.5) * 0.3,
-      c: COLORS[Math.floor(Math.random() * COLORS.length)],
-      a: Math.random() * 0.5 + 0.1
-    });
-  }
+<div align="center">
 
-  function drawParticles() {
-    ctx.clearRect(0, 0, W, H);
-    particles.forEach(p => {
-      p.x += p.dx; p.y += p.dy;
-      if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
-      if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = p.c + p.a + ')';
-      ctx.fill();
-    });
-    requestAnimationFrame(drawParticles);
-  }
-  drawParticles();
+<!--  ╔══════════════════════════════╗  -->
+<!--  ║     CURSED ENERGY BARS      ║  -->
+<!--  ╚══════════════════════════════╝  -->
 
-  // Quote rotator
-  const quotes = document.querySelectorAll('.quote');
-  let qi = 0;
-  setInterval(() => {
-    quotes[qi].classList.remove('active');
-    qi = (qi + 1) % quotes.length;
-    quotes[qi].classList.add('active');
-  }, 3500);
+<svg width="700" height="260" viewBox="0 0 700 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="barBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60c8ff"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="barRed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff4c6a"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="barInf" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#60c8ff"/>
+    </linearGradient>
+    <filter id="barGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
 
-  // Animate bars on scroll / load
-  function animateBars() {
-    document.querySelectorAll('.bar-fill').forEach(bar => {
-      const w = bar.getAttribute('data-w');
-      bar.style.width = w + '%';
-    });
-  }
-  setTimeout(animateBars, 2200);
-</script>
-</body>
-</html>
+  <rect width="700" height="260" fill="#030712" rx="12"/>
+  <rect width="700" height="260" fill="none" stroke="#60c8ff" stroke-width="0.5" stroke-opacity="0.12" rx="12"/>
+
+  <!-- Section label -->
+  <text x="350" y="32" text-anchor="middle" font-family="monospace" font-size="9" letter-spacing="5" fill="#60c8ff" opacity="0.5">⌇  CURSED  ENERGY  OUTPUT</text>
+
+  <!-- Row 1: Frontend -->
+  <text x="40" y="68" font-family="monospace" font-size="10" letter-spacing="2" fill="#4a5568">FRONTEND</text>
+  <rect x="180" y="57" width="460" height="1.5" rx="1" fill="#ffffff" fill-opacity="0.04"/>
+  <rect x="180" y="57" width="0" height="1.5" rx="1" fill="url(#barBlue)" filter="url(#barGlow)">
+    <animate attributeName="width" from="0" to="424" dur="1.5s" begin="0.3s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/>
+  </rect>
+  <text x="654" y="68" font-family="monospace" font-size="10" fill="#60c8ff" opacity="0.6">92</text>
+
+  <!-- Row 2: Backend -->
+  <text x="40" y="108" font-family="monospace" font-size="10" letter-spacing="2" fill="#4a5568">BACKEND</text>
+  <rect x="180" y="97" width="460" height="1.5" rx="1" fill="#ffffff" fill-opacity="0.04"/>
+  <rect x="180" y="97" width="0" height="1.5" rx="1" fill="url(#barBlue)" filter="url(#barGlow)">
+    <animate attributeName="width" from="0" to="391" dur="1.5s" begin="0.6s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/>
+  </rect>
+  <text x="654" y="108" font-family="monospace" font-size="10" fill="#60c8ff" opacity="0.6">85</text>
+
+  <!-- Row 3: Databases -->
+  <text x="40" y="148" font-family="monospace" font-size="10" letter-spacing="2" fill="#4a5568">DATABASES</text>
+  <rect x="180" y="137" width="460" height="1.5" rx="1" fill="#ffffff" fill-opacity="0.04"/>
+  <rect x="180" y="137" width="0" height="1.5" rx="1" fill="url(#barRed)" filter="url(#barGlow)">
+    <animate attributeName="width" from="0" to="368" dur="1.5s" begin="0.9s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/>
+  </rect>
+  <text x="654" y="148" font-family="monospace" font-size="10" fill="#ff4c6a" opacity="0.6">80</text>
+
+  <!-- Row 4: Problem Solving -->
+  <text x="40" y="188" font-family="monospace" font-size="10" letter-spacing="2" fill="#4a5568">PROBLEM SOLVING</text>
+  <rect x="180" y="177" width="460" height="1.5" rx="1" fill="#ffffff" fill-opacity="0.04"/>
+  <rect x="180" y="177" width="0" height="1.5" rx="1" fill="url(#barRed)" filter="url(#barGlow)">
+    <animate attributeName="width" from="0" to="437" dur="1.5s" begin="1.2s" fill="freeze" calcMode="spline" keySplines="0.16 1 0.3 1"/>
+  </rect>
+  <text x="654" y="188" font-family="monospace" font-size="10" fill="#ff4c6a" opacity="0.6">95</text>
+
+  <!-- Row 5: Ego / Infinity -->
+  <text x="40" y="228" font-family="monospace" font-size="10" letter-spacing="2" fill="#4a5568">EGO</text>
+  <rect x="180" y="217" width="460" height="1.5" rx="1" fill="#ffffff" fill-opacity="0.04"/>
+  <rect x="180" y="217" width="460" height="1.5" rx="1" fill="url(#barInf)" filter="url(#barGlow)">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <text x="654" y="228" font-family="monospace" font-size="10" fill="#c084fc" opacity="0.8">∞</text>
+</svg>
+
+<br/><br/>
+
+<!--  ╔════════════════════════════╗  -->
+<!--  ║     TECH STACK CHIPS      ║  -->
+<!--  ╚════════════════════════════╝  -->
+
+<svg width="700" height="200" viewBox="0 0 700 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="200" fill="#030712" rx="12"/>
+  <rect width="700" height="200" fill="none" stroke="#60c8ff" stroke-width="0.5" stroke-opacity="0.12" rx="12"/>
+
+  <text x="350" y="30" text-anchor="middle" font-family="monospace" font-size="9" letter-spacing="5" fill="#60c8ff" opacity="0.5">⌇  TECHNIQUE  ARSENAL</text>
+
+  <!-- Row 1 -->
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.2s" fill="freeze"/>
+    <rect x="40"  y="50" width="90" height="34" rx="5" fill="none" stroke="#60c8ff" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="85"  y="72" text-anchor="middle" font-family="monospace" font-size="10" fill="#f0f4ff" opacity="0.6">JavaScript</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.35s" fill="freeze"/>
+    <rect x="148" y="50" width="90" height="34" rx="5" fill="none" stroke="#60c8ff" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="193" y="72" text-anchor="middle" font-family="monospace" font-size="10" fill="#f0f4ff" opacity="0.6">TypeScript</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.5s" fill="freeze"/>
+    <rect x="256" y="50" width="90" height="34" rx="5" fill="none" stroke="#c084fc" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="301" y="72" text-anchor="middle" font-family="monospace" font-size="10" fill="#f0f4ff" opacity="0.6">React</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.65s" fill="freeze"/>
+    <rect x="364" y="50" width="90" height="34" rx="5" fill="none" stroke="#c084fc" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="409" y="72" text-anchor="middle" font-family="monospace" font-size="10" fill="#f0f4ff" opacity="0.6">Next.js</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.8s" fill="freeze"/>
+    <rect x="472" y="50" width="90" height="34" rx="5" fill="none" stroke="#60c8ff" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="517" y="72" text-anchor="middle" font-family="monospace" font-size="10" fill="#f0f4ff" opacity="0.6">Python</text>
+  </g>
+
+  <!-- Row 2 -->
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="0.95s" fill="freeze"/>
+    <rect x="40"  y="102" width="90" height="34" rx="5" fill="none" stroke="#60c8ff" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="85"  y="124" text-anchor="middle" font-family="monospace" font-size="10" fill="#f0f4ff" opacity="0.6">Node.js</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.1s" fill="freeze"/>
+    <rect x="148" y="102" width="90" height="34" rx="5" fill="none" stroke="#c084fc" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="193" y="124" text-anchor="middle" font-family="monospace" font-size="10" fill="#f0f4ff" opacity="0.6">Tailwind</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.25s" fill="freeze"/>
+    <rect x="256" y="102" width="90" height="34" rx="5" fill="none" stroke="#ff4c6a" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="301" y="124" text-anchor="middle" font-family="monospace" font-size="10" fill="#f0f4ff" opacity="0.6">PostgreSQL</text>
+  </g>
+  <g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="1.4s" fill="freeze"/>
+    <rect x="364" y="102" width="90" height="34" rx="5" fill="none" stroke="#ff4c6a" stroke-width="0.6" stroke-opacity="0.25"/>
+    <text x="409" y="124" text-anchor="middle" font-family="monospace" font-size="10" fill="#f0f4ff" opacity="0.6">MongoDB</text>
+  </g>
+
+  <!-- Footer label -->
+  <text x="350" y="175" text-anchor="middle" font-family="monospace" font-size="9" letter-spacing="3" fill="#4a5568">FULL STACK · BLUE · RED · HOLLOW PURPLE</text>
+</svg>
+
+<br/><br/>
+
+<!--  ╔══════════════════════════╗  -->
+<!--  ║    DOMAIN EXPANSION     ║  -->
+<!--  ╚══════════════════════════╝  -->
+
+<svg width="700" height="160" viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="domainGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#60c8ff"/>
+      <stop offset="50%"  stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#ff4c6a"/>
+      <animateTransform attributeName="gradientTransform" type="translate" from="-1 0" to="1 0" dur="4s" repeatCount="indefinite"/>
+    </linearGradient>
+    <filter id="domGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="700" height="160" fill="#030712" rx="12"/>
+  <!-- animated border -->
+  <rect width="700" height="160" fill="none" rx="12" stroke="url(#domainGrad)" stroke-width="0.8" stroke-opacity="0.4">
+    <animate attributeName="stroke-opacity" values="0.2;0.6;0.2" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Rings -->
+  <ellipse cx="350" cy="80" rx="55" ry="55" fill="none" stroke="#60c8ff" stroke-width="0.4" stroke-opacity="0.15">
+    <animate attributeName="rx" values="55;62;55" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="55;62;55" dur="5s" repeatCount="indefinite"/>
+  </ellipse>
+  <ellipse cx="350" cy="80" rx="80" ry="80" fill="none" stroke="#c084fc" stroke-width="0.4" stroke-opacity="0.1">
+    <animate attributeName="rx" values="80;90;80" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="ry" values="80;90;80" dur="6s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Title -->
+  <text x="350" y="72" text-anchor="middle"
+        font-family="'Trebuchet MS', sans-serif"
+        font-size="46" font-weight="900" letter-spacing="12"
+        fill="url(#domainGrad)" filter="url(#domGlow)">
+    UNLIMITED VOID
+    <animate attributeName="opacity" values="1;1;0.7;1;1" dur="5s" repeatCount="indefinite"/>
+  </text>
+
+  <text x="350" y="100" text-anchor="middle" font-family="monospace" font-size="9" letter-spacing="6" fill="#ffffff" opacity="0.2">DOMAIN  EXPANSION  —  ACTIVE</text>
+
+  <!-- Orbs -->
+  <circle cx="270" cy="135" r="10" fill="none" stroke="#60c8ff" stroke-width="0.8" stroke-opacity="0.5">
+    <animate attributeName="r" values="10;13;10" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <text x="270" y="139" text-anchor="middle" font-family="monospace" font-size="7" fill="#60c8ff" opacity="0.7">BLUE</text>
+
+  <circle cx="350" cy="135" r="10" fill="none" stroke="#c084fc" stroke-width="0.8" stroke-opacity="0.5">
+    <animate attributeName="r" values="10;13;10" dur="3s" begin="1s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" values="0.3;0.8;0.3" dur="3s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+  <text x="350" y="139" text-anchor="middle" font-family="monospace" font-size="9" fill="#c084fc" opacity="0.7">∞</text>
+
+  <circle cx="430" cy="135" r="10" fill="none" stroke="#ff4c6a" stroke-width="0.8" stroke-opacity="0.5">
+    <animate attributeName="r" values="10;13;10" dur="3s" begin="2s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" values="0.3;0.8;0.3" dur="3s" begin="2s" repeatCount="indefinite"/>
+  </circle>
+  <text x="430" y="139" text-anchor="middle" font-family="monospace" font-size="7" fill="#ff4c6a" opacity="0.7">RED</text>
+</svg>
+
+<br/>
+
+<!--  FOOTER  -->
+
+<svg width="500" height="30" viewBox="0 0 500 30" xmlns="http://www.w3.org/2000/svg">
+  <text x="250" y="20" text-anchor="middle" font-family="monospace" font-size="9" letter-spacing="4" fill="#4a5568">
+    ∞  ·  teethaking  ·  Tobe  ·  all domains  ·  ∞
+  </text>
+</svg>
+
+</div>
