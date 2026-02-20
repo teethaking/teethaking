@@ -100,9 +100,9 @@ Available for hire and ready to scale your next big idea.
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-000814?style=for-the-badge&logo=linkedin&logoColor=00d4ff)](https://linkedin.com/in/yourprofile)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-000814?style=for-the-badge&logo=linkedin&logoColor=00d4ff)](https://www.linkedin.com/in/tobechukwu-agbaji-b259a7345/)
 [![Twitter](https://img.shields.io/badge/Twitter-000814?style=for-the-badge&logo=x&logoColor=ffffff)](https://twitter.com/yourprofile)
-[![Gmail](https://img.shields.io/badge/Email-000814?style=for-the-badge&logo=gmail&logoColor=00d4ff)](mailto:yourname@gmail.com)
+[![Gmail](https://img.shields.io/badge/Email-000814?style=for-the-badge&logo=gmail&logoColor=00d4ff)](mailto:teeagbaji@gmail.com)
 [![Portfolio](https://img.shields.io/badge/Portfolio-000814?style=for-the-badge&logo=vercel&logoColor=00d4ff)](https://yourportfolio.com)
 
 <br/>
