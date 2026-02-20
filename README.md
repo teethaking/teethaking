@@ -4,7 +4,7 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Bebas+Neue&size=35&duration=3500&pause=1000&color=00D4FF&center=true&vCenter=true&width=800&height=70&lines=Throughout+Heaven+and+Earth...;I+Alone+Am+The+Full+Stack+One.;Building+Applications+with+Limitless+Precision.;Frontend.+Backend.+Domain+Expansion." />
 
-<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJndXh3M3B6bm93bm93bm93bm93bm93bm93bm93bm93bm93JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/DGsDLROwGiQMw/giphy.gif" width="300px" />
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHIybTVqZnN0eXFvYm95eHh4eHh4eHh4eHh4eHh4eHh4eHh4eHh4ZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/UgV8Y7VAfMrA0A7fTb/giphy.gif" width="400px" />
 
 </div>
 
@@ -34,7 +34,7 @@
       <p><b>Current Objective:</b> Perfecting my Domain Expansion (Full Stack Mastery) and taking on high-impact freelance projects.</p>
     </td>
     <td width="50%" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Codex723&layout=compact&theme=tokyonight&hide_border=true&title_color=00d4ff&text_color=ffffff&bg_color=000814" width="300px"/>
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=teethaking&layout=compact&theme=tokyonight&hide_border=true&title_color=00d4ff&text_color=ffffff&bg_color=000814" width="300px"/>
     </td>
   </tr>
 </table>
@@ -61,12 +61,12 @@
 
 <div align="center">
 
-<img src="https://streak-stats.demolab.com?user=Codex723&theme=tokyonight&hide_border=true&background=000814&ring=00d4ff&fire=00d4ff&currStreakLabel=00d4ff&sideLabels=00d4ff&dates=ffffff" width="100%" />
+<img src="https://streak-stats.demolab.com?user=teethaking&theme=tokyonight&hide_border=true&background=000814&ring=00d4ff&fire=00d4ff&currStreakLabel=00d4ff&sideLabels=00d4ff&dates=ffffff" width="100%" />
 
 <br/>
 
-<img src="https://github-readme-stats.vercel.app/api?username=Codex723&show_icons=true&theme=tokyonight&hide_border=true&bg_color=000814&title_color=00d4ff&text_color=ffffff" width="48%" />
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Codex723&bg_color=000814&color=00d4ff&line=00d4ff&point=ffffff&area=true&hide_border=true" width="48%" />
+<img src="https://github-readme-stats.vercel.app/api?username=teethaking&show_icons=true&theme=tokyonight&hide_border=true&bg_color=000814&title_color=00d4ff&text_color=ffffff" width="48%" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=teethaking&bg_color=000814&color=00d4ff&line=00d4ff&point=ffffff&area=true&hide_border=true" width="48%" />
 
 </div>
 
@@ -84,7 +84,7 @@
 
 `"Don't worry, I'm the strongest."`
 
-<img src="https://komarev.com/ghpvc/?username=Codex723&color=00d4ff&style=for-the-badge&label=CURSED+ENERGY+LEVEL" />
+<img src="https://komarev.com/ghpvc/?username=teethaking&color=00d4ff&style=for-the-badge&label=CURSED+ENERGY+LEVEL" />
 
 </div>
 
